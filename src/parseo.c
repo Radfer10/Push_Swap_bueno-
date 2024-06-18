@@ -20,7 +20,7 @@ void	add_to_stack(t_stack **stack, int num)
 	new_node = malloc(sizeof(t_stack));
 	if (!new_node)
 	{
-		ft_printf("Memory allocation error\n");
+		ft_putstr_fd("Memory allocation error\n", 2);
 		free_stack(stack);
 		exit(1);
 	}

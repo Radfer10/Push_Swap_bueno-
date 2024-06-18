@@ -39,9 +39,9 @@ void	free_stack(t_stack **stack)
 	}
 }
 
-void	display_error(const char *message, int exit_code)
+void	display_error(char *message, int exit_code)
 {
-	ft_printf("%s\n", message);
+	ft_putendl_fd(message, 2);
 	exit(exit_code);
 }
 

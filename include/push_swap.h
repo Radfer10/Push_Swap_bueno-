@@ -40,10 +40,9 @@ typedef struct s_push_swap
 void				push_swap_main(t_push_swap *push_swap);
 int					is_sorted(t_stack *stack);
 /*parseo*/
-int					ft_isdigit2(char c);
 long long			ft_atoll(const char *str);
 int					ft_atoi(const char *str);
-void				display_error(const char *message, int exit_code);
+void				display_error(char *message, int exit_code);
 char				**ft_split(const char *str, char delimiter);
 void				free_2d(char **array);
 int					check_digits(int argc, char **argv);
@@ -94,7 +93,6 @@ int					where_small(t_stack *stack, t_stack *min_node);
 /*main*/
 int					main(int argc, char *argv[]);
 void				print_stack(t_stack *stack);
-void				push2(t_stack **stack, int value);
 void				free_stack(t_stack **stack);
 /*sorting_utils*/
 t_stack				*find_min(t_stack *stack);
