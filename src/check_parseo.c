@@ -6,7 +6,7 @@
 /*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 20:58:24 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/06/18 03:07:24 by rde-migu         ###   ########.fr       */
+/*   Updated: 2024/06/18 05:34:10 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,18 @@ void	check_range(char **s_numbers, t_stack **stack)
 		}
 		i++;
 	}
+}
+
+int	contains_consecutive_signs_in_string(const char *str)
+{
+	while (*str)
+	{
+		if ((*str == '-' && *(str + 1) == '-') || (*str == '+' && *(str
+					+ 1) == '+'))
+		{
+			return (1);
+		}
+		str++;
+	}
+	return (0);
 }

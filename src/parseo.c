@@ -6,7 +6,7 @@
 /*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 20:03:39 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/06/18 03:05:35 by rde-migu         ###   ########.fr       */
+/*   Updated: 2024/06/18 05:34:31 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,11 @@ void	add_numbers_to_stack(t_push_swap *ps, char **s_numbers)
 	k = 0;
 	while (s_numbers[k])
 	{
+		if (contains_consecutive_signs_in_string(s_numbers[k]))
+		{
+			free_stack(&ps->a);
+			display_error("Error", 1);
+		}
 		num = ft_atoi(s_numbers[k]);
 		if (contains_duplicate(ps->a, num))
 		{

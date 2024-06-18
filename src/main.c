@@ -6,7 +6,7 @@
 /*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 20:11:09 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/06/18 03:48:50 by rde-migu         ###   ########.fr       */
+/*   Updated: 2024/06/18 05:33:14 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,14 @@ int	contains_duplicate(t_stack *stack, int value)
 		if (stack->content == value)
 		{
 			return (1);
+		}
+		if (stack->next)
+		{
+			if ((stack->content == '-' && stack->next->content == '-')
+				|| (stack->content == '+' && stack->next->content == '+'))
+			{
+				return (1);
+			}
 		}
 		stack = stack->next;
 	}
