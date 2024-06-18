@@ -76,3 +76,24 @@ int	contains_invalid_signs(const char *str)
 	}
 	return (0);
 }
+
+int	contains_duplicate(t_stack *stack, int value)
+{
+	while (stack)
+	{
+		if (stack->content == value)
+		{
+			return (1);
+		}
+		if (stack->next)
+		{
+			if ((stack->content == '-' && stack->next->content == '-')
+				|| (stack->content == '+' && stack->next->content == '+'))
+			{
+				return (1);
+			}
+		}
+		stack = stack->next;
+	}
+	return (0);
+}

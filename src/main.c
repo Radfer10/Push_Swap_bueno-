@@ -39,27 +39,6 @@ void	free_stack(t_stack **stack)
 	}
 }
 
-int	contains_duplicate(t_stack *stack, int value)
-{
-	while (stack)
-	{
-		if (stack->content == value)
-		{
-			return (1);
-		}
-		if (stack->next)
-		{
-			if ((stack->content == '-' && stack->next->content == '-')
-				|| (stack->content == '+' && stack->next->content == '+'))
-			{
-				return (1);
-			}
-		}
-		stack = stack->next;
-	}
-	return (0);
-}
-
 void	display_error(const char *message, int exit_code)
 {
 	ft_printf("%s\n", message);

@@ -41,27 +41,6 @@ void	add_to_stack(t_stack **stack, int num)
 	}
 }
 
-void	parse_arguments(t_push_swap *ps, int argc, char **argv)
-{
-	char	**s_numbers;
-	int		i;
-
-	i = 1;
-	while (i < argc)
-	{
-		s_numbers = ft_split(argv[i], ' ');
-		if (!s_numbers)
-		{
-			free_stack(&ps->a);
-			display_error("Error", 1);
-		}
-		check_range(s_numbers, &ps->a);
-		add_numbers_to_stack(ps, s_numbers);
-		free_2d(s_numbers);
-		i++;
-	}
-}
-
 void	add_numbers_to_stack(t_push_swap *ps, char **s_numbers)
 {
 	int	num;
@@ -84,6 +63,27 @@ void	add_numbers_to_stack(t_push_swap *ps, char **s_numbers)
 		add_to_stack(&ps->a, num);
 		ps->a_size++;
 		k++;
+	}
+}
+
+void	parse_arguments(t_push_swap *ps, int argc, char **argv)
+{
+	char	**s_numbers;
+	int		i;
+
+	i = 1;
+	while (i < argc)
+	{
+		s_numbers = ft_split(argv[i], ' ');
+		if (!s_numbers)
+		{
+			free_stack(&ps->a);
+			display_error("Error", 1);
+		}
+		check_range(s_numbers, &ps->a);
+		add_numbers_to_stack(ps, s_numbers);
+		free_2d(s_numbers);
+		i++;
 	}
 }
 
