@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   ft_putstr_pf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/14 16:46:59 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/06/18 01:59:23 by rde-migu         ###   ########.fr       */
+/*   Created: 2024/02/23 17:45:03 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/03/08 14:37:56 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "ft_printf.h"
 
-void	sa(t_push_swap *push_swap)
+void	ft_putstr_pf(char *str, int *len)
 {
-	push_swap->a = swap(push_swap->a);
-	ft_printf("sa\n");
-}
+	int	i;
 
-void	sb(t_push_swap *push_swap)
-{
-	push_swap->b = swap(push_swap->b);
-	ft_printf("sb\n");
-}
-
-void	ss(t_push_swap *push_swap)
-{
-	push_swap->a = swap(push_swap->a);
-	push_swap->b = swap(push_swap->b);
-	ft_printf("ss\n");
+	i = 0;
+	if (!str)
+		str = "(null)";
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+		(*len)++;
+	}
 }

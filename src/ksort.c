@@ -6,7 +6,7 @@
 /*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 20:04:31 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/06/14 19:01:03 by rde-migu         ###   ########.fr       */
+/*   Updated: 2024/06/18 03:48:19 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	assign_indices(t_stack **stack)
 	array = malloc(size * sizeof(t_stack *));
 	if (!array)
 	{
-		fprintf(stderr, "Memory allocation error\n");
+		ft_printf("Memory allocation error\n");
 		exit(1);
 	}
 	fill_array(array, *stack, size);
@@ -94,12 +94,10 @@ void	k_sort1(t_push_swap *push_swap)
 			pb(push_swap);
 			if (push_swap->b && push_swap->b->next)
 				rb(push_swap);
-			i++;
+			++i;
 		}
 		else
-		{
 			ra(push_swap);
-		}
 	}
 }
 
@@ -124,16 +122,10 @@ void	k_sort2(t_push_swap *push_swap)
 			while (push_swap->b->index != length - 1)
 			{
 				reverse_rotate(&(push_swap->b));
-				printf("rrb\n");
+				ft_printf("rrb\n");
 			}
 		}
 		pa(push_swap);
 		length--;
 	}
-}
-void	k_sort(t_push_swap *push_swap)
-{
-	assign_indices(&(push_swap->a));
-	k_sort1(push_swap);
-	k_sort2(push_swap);
 }

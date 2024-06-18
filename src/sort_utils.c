@@ -6,7 +6,7 @@
 /*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 20:07:52 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/06/14 17:01:48 by rde-migu         ###   ########.fr       */
+/*   Updated: 2024/06/18 02:00:31 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ void	print_stack(t_stack *stack)
 {
 	while (stack)
 	{
-		printf("%d ", stack->content);
+		ft_printf("%d ", stack->content);
 		stack = stack->next;
 	}
-	printf("\n");
+	ft_printf("\n");
 }
 
 t_stack	*find_min(t_stack *stack)

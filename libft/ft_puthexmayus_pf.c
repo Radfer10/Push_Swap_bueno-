@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   ft_puthexmayus_pf.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/14 16:46:59 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/06/18 01:59:23 by rde-migu         ###   ########.fr       */
+/*   Created: 2024/02/26 14:42:21 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/02/27 19:48:26 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "ft_printf.h"
 
-void	sa(t_push_swap *push_swap)
+void	ft_puthexmayus_pf(unsigned int n, int *i)
 {
-	push_swap->a = swap(push_swap->a);
-	ft_printf("sa\n");
-}
+	char	*hex;
 
-void	sb(t_push_swap *push_swap)
-{
-	push_swap->b = swap(push_swap->b);
-	ft_printf("sb\n");
-}
-
-void	ss(t_push_swap *push_swap)
-{
-	push_swap->a = swap(push_swap->a);
-	push_swap->b = swap(push_swap->b);
-	ft_printf("ss\n");
+	hex = "0123456789ABCDEF";
+	if (n >= 16)
+	{
+		ft_puthexmayus_pf(n / 16, i);
+		ft_putchar_pf(hex[n % 16], i);
+	}
+	else
+	{
+		ft_putchar_pf(hex[n % 16], i);
+	}
 }
