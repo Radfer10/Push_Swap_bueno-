@@ -6,7 +6,7 @@
 /*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 19:20:40 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/06/18 14:19:53 by rde-migu         ###   ########.fr       */
+/*   Updated: 2024/06/18 14:21:58 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void				arg_parse(t_push_swap *ps, int argc, char **argv);
 /*accions*/
 t_stack				*swap(t_stack *stack);
 void				sa(t_push_swap *push_swap);
-void				sb(t_push_swap *push_swa
+void				sb(t_push_swap *push_swap);
 void				ss(t_push_swap *push_swap);
 void				push(t_stack **stack_a, t_stack **stack_b);
 void				pa(t_push_swap *push_swap);
