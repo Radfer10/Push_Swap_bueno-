@@ -49,7 +49,7 @@ void	add_numbers_to_stack(t_push_swap *ps, char **s_numbers)
 	k = 0;
 	while (s_numbers[k])
 	{
-		if (contains_invalid_signs(s_numbers[k]))
+		if (contains_invalid_signs(s_numbers[k]) || contains_non_numeric_characters(s_numbers[k]))
 		{
 			free_stack(&ps->a);
 			display_error("Error", 1);

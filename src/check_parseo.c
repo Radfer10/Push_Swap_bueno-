@@ -97,3 +97,15 @@ int	contains_duplicate(t_stack *stack, int value)
 	}
 	return (0);
 }
+
+int contains_non_numeric_characters(const char *str) 
+{
+    while (*str) {
+        if (!ft_isdigit(*str) && *str != '-' && *str != '+') 
+		{
+            return 1; 
+        }
+        str++;
+    }
+    return 0;
+}
