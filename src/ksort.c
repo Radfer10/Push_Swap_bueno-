@@ -6,7 +6,7 @@
 /*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 20:04:31 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/06/18 05:12:26 by rde-migu         ###   ########.fr       */
+/*   Updated: 2024/06/24 19:00:12 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,6 @@ void	k_sort1(t_push_swap *push_swap)
 			pb(push_swap);
 			if (push_swap->b && push_swap->b->next)
 				rb(push_swap);
-				
 			++i;
 		}
 		else

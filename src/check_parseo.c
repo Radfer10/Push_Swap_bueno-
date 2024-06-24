@@ -6,7 +6,7 @@
 /*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 20:58:24 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/06/18 15:31:24 by rde-migu         ###   ########.fr       */
+/*   Updated: 2024/06/24 19:00:38 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,14 +98,15 @@ int	contains_duplicate(t_stack *stack, int value)
 	return (0);
 }
 
-int contains_non_numeric_characters(const char *str) 
+int	contains_non_numeric_characters(const char *str)
 {
-    while (*str) {
-        if (!ft_isdigit(*str) && *str != '-' && *str != '+') 
+	while (*str)
+	{
+		if (!ft_isdigit(*str) && *str != '-' && *str != '+')
 		{
-            return 1; 
-        }
-        str++;
-    }
-    return 0;
+			return (1);
+		}
+		str++;
+	}
+	return (0);
 }

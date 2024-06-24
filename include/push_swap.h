@@ -6,7 +6,7 @@
 /*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 19:20:40 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/06/18 14:21:58 by rde-migu         ###   ########.fr       */
+/*   Updated: 2024/06/24 18:59:59 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,12 @@
 
 # include "../libft/libft.h"
 # include <limits.h>
+# include <math.h>
 # include <stdbool.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-# include <math.h>
-
 
 typedef struct s_stack
 {
@@ -49,7 +48,7 @@ char				**ft_split(const char *str, char delimiter);
 void				free_2d(char **array);
 int					check_digits(int argc, char **argv);
 int					contains_duplicate(t_stack *stack, int value);
-int 				contains_non_numeric_characters(const char *str);
+int					contains_non_numeric_characters(const char *str);
 int					contains_invalid_signs(const char *str);
 void				check_range(char **s_numbers, t_stack **stack);
 void				add_to_stack(t_stack **stack, int num);

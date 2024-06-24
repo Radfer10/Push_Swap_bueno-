@@ -6,7 +6,7 @@
 /*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 20:03:39 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/06/18 05:57:29 by rde-migu         ###   ########.fr       */
+/*   Updated: 2024/06/24 19:01:13 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ void	add_numbers_to_stack(t_push_swap *ps, char **s_numbers)
 	k = 0;
 	while (s_numbers[k])
 	{
-		if (contains_invalid_signs(s_numbers[k]) || contains_non_numeric_characters(s_numbers[k]))
+		if (contains_invalid_signs(s_numbers[k])
+			|| contains_non_numeric_characters(s_numbers[k]))
 		{
 			free_stack(&ps->a);
 			display_error("Error", 1);
